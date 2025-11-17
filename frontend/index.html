@@ -1,0 +1,52 @@
+        <!doctype html>
+        <html lang="en">
+        <head>
+          <meta charset="utf-8" />
+          <title>AI Grader — Editor</title>
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+          <div class="container">
+            <header><h1>AI Grader — Code Editor</h1></header>
+
+            <main>
+              <section class="meta">
+                <label>Assignment ID: <input id="assignmentId" value="" placeholder="paste assignment id"/></label>
+                <label>Your Email: <input id="studentEmail" placeholder="email@example.com" /></label>
+              </section>
+
+              <section class="editor-area">
+                <div class="controls">
+                  <button id="runBtn">Run</button>
+                  <button id="submitBtn">Submit</button>
+                </div>
+                <textarea id="codeEditor" spellcheck="false" autocapitalize="off">// Python sample:
+// Read two lines and print sum
+a = int(input())
+b = int(input())
+print(a + b)
+                </textarea>
+              </section>
+
+              <section class="io">
+                <div>
+                  <h3>Input</h3>
+                  <textarea id="stdin" placeholder="stdin for run (optional)"></textarea>
+                </div>
+                <div>
+                  <h3>Output</h3>
+                  <pre id="output"></pre>
+                </div>
+              </section>
+
+              <section class="result" id="resultSection" style="display:none;">
+                <h3>Submission Result</h3>
+                <div id="resultJson"></div>
+              </section>
+            </main>
+          </div>
+
+          <script src="app.js"></script>
+        </body>
+        </html>
